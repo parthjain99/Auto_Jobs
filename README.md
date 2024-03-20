@@ -5,9 +5,9 @@ It provides features such as generating cover letters with AI and
 tracking job applications; it also helps with customizing your Resume
 as it creates a separate folder for each company.*
 
-##Demo
+## Demo
 
-<video src="assets/demo.mp4" controls>
+<video src="[assets/demo.mp4](https://github.com/parthjain99/Auto_Jobs/blob/master/assets/demo.mp4)" controls>
    Your browser does not support the video tag.
 </video>
 
