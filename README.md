@@ -1,4 +1,4 @@
-# *Automated Application Tracker for Candidates*
+# *Automated Application Tracker for Candidates* with AI cover letter generator and new Company folder creation.
 
 *This project is an automated application tracker for candidates.
 It provides features such as generating cover letters with AI and
