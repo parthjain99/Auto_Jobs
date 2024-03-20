@@ -8,7 +8,7 @@ as it creates a separate folder for each company.*
 ## Demo
 
 
-![Demo](https://github.com/parthjain99/Auto_Jobs/blob/master/assets/demo-ezgif.com-video-to-gif-converter.mp4)
+![Demo](https://www.youtube.com/watch?v=uD15hxrJPgU)
 
 
 
