@@ -8,7 +8,8 @@ from docx.shared import RGBColor
 import sys
 sys.path.append("..")
 from config.config import (challenge_prompt, intro_prompt, body_prompt, 
-                           conclusion_prompt, get_match_prompt, eval_prompt)
+                           conclusion_prompt, get_match_prompt, eval_prompt,
+                           FName, LName)
 
 model = ChatGoogleGenerativeAI(model="gemini-pro")
 
@@ -74,5 +75,5 @@ def cover_letter(jd, resume, company):
                                     output_variables=["hook1", "hook2", "hook3"])
     final = final_chain.invoke({"jd":jd, "resume": resume, "company": company})
     hook1, hook2, hook3  = final["hook1"], final["hook2"], final["hook3"]
-    cv = f"""Hello Hiring team at {company},\n\n {hook1} \n\n {hook2} \n\n {hook3} \n\n Thank you for the opportunity, \n Parth Jain"""
+    cv = f"""Hello Hiring team at {company},\n\n {hook1} \n\n {hook2} \n\n {hook3} \n\n Thank you for the opportunity, \n {FName} {LName}"""
     return cv
