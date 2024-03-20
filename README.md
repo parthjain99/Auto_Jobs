@@ -7,7 +7,7 @@ as it creates a separate folder for each company.*
 
 ## Demo
 
-<video src="[assets/demo.mp4](https://github.com/parthjain99/Auto_Jobs/blob/master/assets/demo.mp4)" controls>
+<video src="(https://github.com/parthjain99/Auto_Jobs/blob/master/assets/demo.mp4)" controls>
    Your browser does not support the video tag.
 </video>
 
