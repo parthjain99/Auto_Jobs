@@ -8,7 +8,7 @@ from CSV_saving import save_to_file
 from docx.shared import RGBColor
 
 from config import (
-    parent_dir, rolePath, FName, LName
+    parent_dir, rolePath, FName, LName, roleMap
 )
 
 def copys(root_src_dir, root_dst_dir):
@@ -28,12 +28,12 @@ path = os.path.join(parent_dir, sys.argv[2])
 if not os.path.exists(path):
     os.mkdir(path)
 
-if sys.argv[1] == rolePath.BE:
-    copys(rolePath.BE.value, path)
-elif sys.argv[1] == rolePath.DS:
-    copys(rolePath.DS.value, path)
-elif sys.argv[1] == rolePath.ML:
-    copys(rolePath.ML.value, path)
+if sys.argv[1] == rolePath.Role1.value:
+    copys(roleMap["Role1"], path)
+elif sys.argv[1] == rolePath.Role2.value:
+    copys(roleMap["Role2"], path)
+elif sys.argv[1] == rolePath.Role3.value:
+    copys(roleMap["Role3"], path)
 else:
     print("Role not found")
     exit()
@@ -48,13 +48,10 @@ print("____________Resume File________________")
 print(path_p)
 
 print("__________________JD____________________")
-jd = []
-while True:
-    line = input("Paste Job description\n")
-    if line == "quit":
-        break
-    jd.append(line)
-jd = "\n".join(jd)
+print("Enter/Paste your Job description. Ctrl-D or Ctrl-Z  to save it.")
+jd = sys.stdin.read()
+# jd = " ".join(jd)
+
 resume = input_pdf_setup(path_r)
 print("_______________match Score________________")
 get_match_score(jd, resume)
@@ -72,7 +69,6 @@ style.font.color.rgb = RGBColor(0,0,0)
 for paragraph in doc.tables[0].rows[1].cells[1].paragraphs:
     paragraph.style = doc.styles['NewStyle']
 doc.save(f'{parent_dir}/{sys.argv[2]}/{FName}_{LName}_cover_letter1.docx')
-doc.save(f'{parent_dir}/{sys.argv[2]}/{FName}_{LName}_cover_letter1.pdf')
 
 save_to_file(company_name=sys.argv[1], jd=jd, role=sys.argv[2])
 print("Cover letter Saved")

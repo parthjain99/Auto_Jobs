@@ -6,16 +6,15 @@ import PyPDF2
 from docx.shared import Pt
 from docx.shared import RGBColor
 from config import (
-    GOOGLE_API_KEY, eval_prompt, get_match_prompt
-
+    GOOGLE_API_KEY
 )
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
 
-def get_gemini_response(input, pdf_content, prompt):
+def get_gemini_response(prompt):
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content([input, pdf_content, prompt])
+    response = model.generate_content([prompt])
     return response.text
 
 
@@ -42,16 +41,27 @@ def input_pdf_setup(uploaded_file):
 def get_eval(jd, uploaded_file):
     if uploaded_file is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
-        response = get_gemini_response(jd, uploaded_file, eval_prompt)
+        eval_prompt = f"""Be really concise and avoid generic statements, Specify How the resume bullet points
+                which bullets points can be modified to tailor the resume best to the job descripion. 
+                List all the points one by one. Just suggest changes in expierience and project section. 
+                Be strict and tell will resume pass the screnning test. Suggest changes that are 
+                related to the Job description and align with resume, Avoid in general fixes.
+                Here is resume ```{uploaded_file}``` and here is the job description ```{jd}```
+                """
+        response = get_gemini_response(eval_prompt)
         print(response)
     else:
         print("Please uplaod the resume")
 
 
-def get_match_score(jd, uploaded_file):
-    if uploaded_file is not None:
+def get_match_score(jd, resume):
+    if resume is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
-        response = get_gemini_response(jd, uploaded_file, get_match_prompt)
+        get_match_prompt = f"""You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of 
+        ATS functionality, your task is to evaluate the resume against this job description ```{jd}```. 
+        give me the percentage of match if the resume matches the job description. First the output all the keywords in job description
+        and then job description keywords missing in resume , and then percentage match of keyword found vs keyword total. Here is the Resume ```{resume}```"""
+        response = get_gemini_response(get_match_prompt)
         print(response)
     else:
         print("Please upload the resume")
@@ -63,10 +73,7 @@ def cover_letter(jd, resume, company):
     Analyze the job description and identify biggest challenge someone in this role would face. day to day. 
     Give me root cause of the problem. Now here is the job description ```{jd}```. 
     """
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content([jd, cv_hook1_prompt])
-    challenges =  response.text
-    print(challenges)
+    challenges = get_gemini_response(cv_hook1_prompt)
 
 
     input_prompt_6 =f"""
@@ -81,10 +88,8 @@ def cover_letter(jd, resume, company):
     Now here is the job description ```{jd}```.
     Company name is ```{company}```.
     """
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content([jd, input_prompt_6, resume, company, challenges])
-    hook1 =  response.text
-    print(hook1)
+    hook1 = get_gemini_response(input_prompt_6)
+
 
     input_prompt_7 = f""" here is the first hook {hook1}. Now, your task is to write 
     the next paragraph of my cover letter by expanding on experiences from all roles 
@@ -103,18 +108,14 @@ def cover_letter(jd, resume, company):
     Now here is the job description ```{jd}```.
     Company name is ```{company}```
     """
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content([jd, input_prompt_7, resume, company, hook1])
-    hook2 =  response.text
-    print(hook2)
+    hook2 = get_gemini_response(input_prompt_7)
 
     input_prompt_8 = f""" here is the first hook {hook1} and the second hook {hook2}.
     Now your task is to close out the cover letter with a final paragraph reiterating my strong interest in the role.
     Be concise and keep it within 50 words.
     """
 
-    model = genai.GenerativeModel('gemini-pro')
-    hook3 = model.generate_content([hook1, hook2, input_prompt_8]).text
+    hook3 = get_gemini_response(input_prompt_8)
     cv = f"""Hello Hiring team at {company},\n\n {hook1} \n\n {hook2} \n\n {hook3} \n\n Thank you for the opportunity, \n Parth Jain"""
     return cv
 
