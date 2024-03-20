@@ -4,7 +4,7 @@ import datetime
 
 def save_to_file(company_name, jd, role):
     # Load the existing CSV file into a DataFrame
-    df = pd.read_csv("Job Tracker.csv")
+    df = pd.read_csv("../Job Tracker.csv")
 
     # Create a new DataFrame for the new row
     new_row_df = pd.DataFrame({

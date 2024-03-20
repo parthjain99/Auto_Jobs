@@ -1,10 +1,10 @@
 import os
 import sys
 import shutil
-from google_smart import get_match_score, get_eval, input_pdf_setup, cover_letter
+from src.google_smart import get_match_score, get_eval, input_pdf_setup, cover_letter
 from docx import Document
 from docx.shared import Pt
-from CSV_saving import save_to_file
+from src.CSV_saving import save_to_file
 from docx.shared import RGBColor
 
 from config import (
