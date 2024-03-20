@@ -6,7 +6,6 @@ sys.path.append('..')
 def save_to_file(company_name, jd, role):
     # Load the existing CSV file into a DataFrame
     df = pd.read_csv("assets/Job Tracker.csv")
-    print(df.head())
     # Create a new DataFrame for the new row
     new_row_df = pd.DataFrame({
         'COMPANY': [company_name],
