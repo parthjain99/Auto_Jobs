@@ -7,7 +7,9 @@ as it creates a separate folder for each company.*
 
 ## Demo
 
-<video src="https://github.com/parthjain99/Auto_Jobs/blob/master/assets/demo-ezgif.com-video-to-gif-converter.gif" controls> </video>
+
+![Alt Text][https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif](https://github.com/parthjain99/Auto_Jobs/blob/master/assets/demo-ezgif.com-video-to-gif-converter.gif)
+
 
 
 ## *Getting Started*
