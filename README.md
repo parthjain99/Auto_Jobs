@@ -32,4 +32,6 @@ as it creates a separate folder for each company.*
 
 *Once the setup is complete, you can start using the application to track your job applications and generate cover letters with AI.*
 
-***Note:** If you want to contribute  fork this GitHub-> make changes-> create a pull request.**
+***Note:** If you want to contribute, fork this GitHub repository, make changes, and create a pull request.*
+
+*We appreciate your contributions and look forward to your pull requests!*
