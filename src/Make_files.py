@@ -6,8 +6,9 @@ from docx import Document
 from docx.shared import Pt
 from src.CSV_saving import save_to_file
 from docx.shared import RGBColor
-
-from config import (
+import sys
+sys.path.append("..")
+from config.config import (
     parent_dir, rolePath, FName, LName, roleMap
 )
 
@@ -22,7 +23,6 @@ def copys(root_src_dir, root_dst_dir):
             if os.path.exists(dst_file):
                 os.remove(dst_file)
             shutil.copy(src_file, dst_dir)
-
 
 path = os.path.join(parent_dir, sys.argv[2])
 if not os.path.exists(path):
@@ -55,7 +55,7 @@ jd = sys.stdin.read()
 resume = input_pdf_setup(path_r)
 print("_______________match Score________________")
 get_match_score(jd, resume)
-print("______________suggetions_________________")
+print("______________suggestions_________________")
 get_eval(jd, resume)
 
 doc = Document(path_c)
@@ -70,5 +70,5 @@ for paragraph in doc.tables[0].rows[1].cells[1].paragraphs:
     paragraph.style = doc.styles['NewStyle']
 doc.save(f'{parent_dir}/{sys.argv[2]}/{FName}_{LName}_cover_letter1.docx')
 
-save_to_file(company_name=sys.argv[1], jd=jd, role=sys.argv[2])
+save_to_file(company_name=sys.argv[2], jd=jd, role=sys.argv[1])
 print("Cover letter Saved")

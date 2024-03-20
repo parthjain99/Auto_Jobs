@@ -1,13 +1,12 @@
 import os
-
 import google.generativeai as genai
 from docx import Document
 import PyPDF2
 from docx.shared import Pt
 from docx.shared import RGBColor
-from config import (
-    GOOGLE_API_KEY
-)
+import sys
+sys.path.append("..")
+from config.config import (GOOGLE_API_KEY)
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
