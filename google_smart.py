@@ -4,11 +4,13 @@ import google.generativeai as genai
 from docx import Document
 import PyPDF2
 from docx.shared import Pt
-from dotenv import load_dotenv
 from docx.shared import RGBColor
+from config import (
+    GOOGLE_API_KEY, eval_prompt, get_match_prompt
 
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+)
+
+genai.configure(api_key=GOOGLE_API_KEY)
 
 
 def get_gemini_response(input, pdf_content, prompt):
@@ -40,11 +42,7 @@ def input_pdf_setup(uploaded_file):
 def get_eval(jd, uploaded_file):
     if uploaded_file is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
-        input_prompt1 = """Be really concise and avoid generic statements, Specify How the resume bullet points/ 
-        which bullets points can be modified to tailor the reusme best to the job descripion. List all the points one 
-        by one. Just suggest changes in expierience and project section. Be strict and tell will resume pass the 
-        screnning test. Suggest point changes that are related to the Job description, Avoid in general fixes."""
-        response = get_gemini_response(jd, uploaded_file, input_prompt1)
+        response = get_gemini_response(jd, uploaded_file, eval_prompt)
         print(response)
     else:
         print("Please uplaod the resume")
@@ -53,24 +51,20 @@ def get_eval(jd, uploaded_file):
 def get_match_score(jd, uploaded_file):
     if uploaded_file is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
-        input_prompt3 = """You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of 
-        ATS functionality, your task is to evaluate the resume against the provided job description. 
-        give me the percentage of match if the resume matches the job description. First the output should come as 
-        percentage and then keywords missing , just be concise with final thoughts 1 paragraph.. """
-        response = get_gemini_response(jd, uploaded_file, input_prompt3)
+        response = get_gemini_response(jd, uploaded_file, get_match_prompt)
         print(response)
     else:
         print("Please upload the resume")
 
 
 def cover_letter(jd, resume, company):
-    input_prompt_5 = f"""Assume the role of a expierienced career coach.
+    cv_hook1_prompt = f"""Assume the role of a expierienced career coach.
     I want to stand out from other job seekers by reverse engineering the job descripion to uncover what the company is exactly lookin for.
     Analyze the job description and identify biggest challenge someone in this role would face. day to day. 
     Give me root cause of the problem. Now here is the job description ```{jd}```. 
     """
     model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content([jd, input_prompt_5])
+    response = model.generate_content([jd, cv_hook1_prompt])
     challenges =  response.text
     print(challenges)
 

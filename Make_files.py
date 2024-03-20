@@ -7,6 +7,10 @@ from docx.shared import Pt
 from CSV_saving import save_to_file
 from docx.shared import RGBColor
 
+from config import (
+    parent_dir, rolePath, FName, LName
+)
+
 def copys(root_src_dir, root_dst_dir):
     for src_dir, dirs, files in os.walk(root_src_dir):
         dst_dir = src_dir.replace(root_src_dir, root_dst_dir, 1)
@@ -20,23 +24,26 @@ def copys(root_src_dir, root_dst_dir):
             shutil.copy(src_file, dst_dir)
 
 
-parent_dir = "/Users/parthjain/Desktop/jobs/newS"
 path = os.path.join(parent_dir, sys.argv[2])
 if not os.path.exists(path):
     os.mkdir(path)
 
-if sys.argv[1] == "BE":
-    copys("/Users/parthjain/Desktop/jobs/templates/backend", path)
-elif sys.argv[1] == "DS":
-    copys("/Users/parthjain/Desktop/jobs/templates/Dataanalysis", path)
-elif sys.argv[1] == "ML":
-    copys("/Users/parthjain/Desktop/jobs/templates/machine leanring", path)
+if sys.argv[1] == rolePath.BE:
+    copys(rolePath.BE.value, path)
+elif sys.argv[1] == rolePath.DS:
+    copys(rolePath.DS.value, path)
+elif sys.argv[1] == rolePath.ML:
+    copys(rolePath.ML.value, path)
+else:
+    print("Role not found")
+    exit()
 
 print("_________________file______")
 print(path)
-path_p = os.path.join(parent_dir, sys.argv[2], "Parth_Jain_Resume.pages")
-path_r = os.path.join(parent_dir, sys.argv[2], "Parth_Jain_Resume.pdf")
-path_c = os.path.join(parent_dir, sys.argv[2], "Parth Jain_cover_letter.docx")
+path_p = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_Resume.pages")
+path_r = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_Resume.pdf")
+path_c = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_cover_letter.docx")
+
 print("____________Resume File________________")
 print(path_p)
 
@@ -64,6 +71,8 @@ style.font.color.rgb = RGBColor(0,0,0)
 # Apply the new style to each paragraph
 for paragraph in doc.tables[0].rows[1].cells[1].paragraphs:
     paragraph.style = doc.styles['NewStyle']
-doc.save(f'/Users/parthjain/Desktop/Jobs/news/{sys.argv[2]}/Parth Jain_cover_letter1.docx') 
+doc.save(f'{parent_dir}/{sys.argv[2]}/{FName}_{LName}_cover_letter1.docx')
+doc.save(f'{parent_dir}/{sys.argv[2]}/{FName}_{LName}_cover_letter1.pdf')
+
 save_to_file(company_name=sys.argv[1], jd=jd, role=sys.argv[2])
 print("Cover letter Saved")
