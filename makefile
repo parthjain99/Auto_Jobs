@@ -1,7 +1,3 @@
-# Clean target
-clean:
-	# Add clean commands here
-
 # Setup target
 setup:
 	python3 -m src.setup
