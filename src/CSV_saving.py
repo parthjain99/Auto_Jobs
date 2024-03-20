@@ -1,11 +1,12 @@
 import pandas as pd
 import datetime
-
+import sys
+sys.path.append('..')
 
 def save_to_file(company_name, jd, role):
     # Load the existing CSV file into a DataFrame
     df = pd.read_csv("assets/Job Tracker.csv")
-
+    print(df.head())
     # Create a new DataFrame for the new row
     new_row_df = pd.DataFrame({
         'COMPANY': [company_name],
@@ -18,7 +19,7 @@ def save_to_file(company_name, jd, role):
     updated_df = pd.concat([df, new_row_df], ignore_index=True)
 
     # Save the updated DataFrame back to the CSV file
-    updated_df.to_csv("Copy of Job Tracking Template - Job Tracker.csv", index=False)
+    updated_df.to_csv("assets/Job Tracker.csv", index=False)
 
 
 # # Example usage

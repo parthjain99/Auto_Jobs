@@ -10,24 +10,21 @@ as it creates a separate folder for each company.*
 *To get started, follow these steps:*
 
 1. *Make sure you have Python 3 installed on your system.*
-3. *Install the project dependencies:*
+2. *Install the project dependencies:*
 
    - *Run the command: `make install`*
-
-4. *Set up the configuration file:*
+3. *Set up the configuration file:*
 
    - *Configure the necessary settings in the `config.py` file. **IMPORTANT***
-
-5. *Run the setup script:*
+4. *Run the setup script:*
 
    - *Run the command: `make setup`* *Dont skip step 4*
-6. *Place the desired resume templates in the templates directory:*
+5. *Place the desired resume templates in the templates directory:*
 
    - *For each role type  you have added in the config file, add a resume for the same in both docx and pdf formats.*
-   
-7. *To generate a cover letter and create a folder for a specific role and company, run the following command:*
+6. *To generate a cover letter and create a folder for a specific role and company, run the following command:*
 
-   - *Run the command: `make run role="<role abreviation>" Company="<Company name>"`*
+   - *Run the command: `make run r="<role abreviation>" c="<Company name>"`*
    - *It will ask for the job description, provide that and then press `Ctrl + D`.*
    - *Your cover letter and folder will be created, along with suggestions to improve your resume and tailor it.*
 

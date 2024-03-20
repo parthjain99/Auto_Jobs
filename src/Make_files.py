@@ -40,7 +40,11 @@ else:
 
 print("_________________file______")
 print(path)
-path_p = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_Resume.pages")
+if not os.path.exists(f"{parent_dir}/{sys.argv[2]}/{FName}_{LName}_Resume.pages"):
+    path_p = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_Resume.pages")
+else:
+    path_p = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_Resume.docx")
+
 path_r = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_Resume.pdf")
 path_c = os.path.join(parent_dir, sys.argv[2], f"{FName}_{LName}_cover_letter.docx")
 

@@ -10,7 +10,7 @@ install:
 
 # New role target
 run:
-	source venv/bin/activate && python3 -m src.Make_files $(role) $(Company)
+	source venv/bin/activate && python3 -m src.Make_files $(r) $(c)
 
 # Phony targets
 .PHONY: all build clean setup install new-role
