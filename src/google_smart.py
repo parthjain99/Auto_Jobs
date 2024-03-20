@@ -1,20 +1,16 @@
-import os
-import google.generativeai as genai
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.prompts import PromptTemplate
+from langchain.chains import LLMChain, SequentialChain
 from docx import Document
 import PyPDF2
 from docx.shared import Pt
 from docx.shared import RGBColor
 import sys
 sys.path.append("..")
-from config.config import (GOOGLE_API_KEY)
+from config.config import (challenge_prompt, intro_prompt, body_prompt, 
+                           conclusion_prompt, get_match_prompt, eval_prompt)
 
-genai.configure(api_key=GOOGLE_API_KEY)
-
-
-def get_gemini_response(prompt):
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content([prompt])
-    return response.text
+model = ChatGoogleGenerativeAI(model="gemini-pro")
 
 
 def input_pdf_setup(uploaded_file):
@@ -26,9 +22,6 @@ def input_pdf_setup(uploaded_file):
         # creating a pdf reader object
         pdfReader = PyPDF2.PdfReader(pdfFileObj)
 
-        # printing number of pages in pdf file
-        print(len(pdfReader.pages))
-
         # creating a page object
         pageObj = pdfReader.pages[0]
         txt = pageObj.extract_text()
@@ -37,18 +30,13 @@ def input_pdf_setup(uploaded_file):
         return txt
 
 
-def get_eval(jd, uploaded_file):
-    if uploaded_file is not None:
+def get_eval(jd, resume):
+    if resume is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
-        eval_prompt = f"""Be really concise and avoid generic statements, Specify How the resume bullet points
-                which bullets points can be modified to tailor the resume best to the job descripion. 
-                List all the points one by one. Just suggest changes in expierience and project section. 
-                Be strict and tell will resume pass the screnning test. Suggest changes that are 
-                related to the Job description and align with resume, Avoid in general fixes.
-                Here is resume ```{uploaded_file}``` and here is the job description ```{jd}```
-                """
-        response = get_gemini_response(eval_prompt)
-        print(response)
+        eval_prompt_template = PromptTemplate.from_template(template = eval_prompt)
+        eval_chain = LLMChain(prompt = eval_prompt_template ,llm = model, output_key = "eval_score")
+        response = eval_chain.invoke({"resume":resume, "jd":jd})
+        print(response['eval_score'])
     else:
         print("Please uplaod the resume")
 
@@ -56,65 +44,36 @@ def get_eval(jd, uploaded_file):
 def get_match_score(jd, resume):
     if resume is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
-        get_match_prompt = f"""You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of 
-        ATS functionality, your task is to evaluate the resume against this job description ```{jd}```. 
-        give me the percentage of match if the resume matches the job description. First the output all the keywords in job description
-        and then job description keywords missing in resume , and then percentage match of keyword found vs keyword total. Here is the Resume ```{resume}```"""
-        response = get_gemini_response(get_match_prompt)
-        print(response)
+        get_match_prompt_template = PromptTemplate.from_template(template = get_match_prompt)
+        get_match_chain = LLMChain(prompt = get_match_prompt_template ,llm = model, output_key = "match_score")
+        response = get_match_chain.invoke({"resume":resume, "jd":jd})
+        print(response['match_score'])
     else:
         print("Please upload the resume")
 
 
 def cover_letter(jd, resume, company):
-    cv_hook1_prompt = f"""Assume the role of a expierienced career coach.
-    I want to stand out from other job seekers by reverse engineering the job descripion to uncover what the company is exactly lookin for.
-    Analyze the job description and identify biggest challenge someone in this role would face. day to day. 
-    Give me root cause of the problem. Now here is the job description ```{jd}```. 
-    """
-    challenges = get_gemini_response(cv_hook1_prompt)
+    challenge_prompt_template = PromptTemplate.from_template(template = challenge_prompt)
+    challenge_chain = LLMChain(llm = model, prompt = challenge_prompt_template, 
+                                output_key = "challenges")
 
+    intro_prompt_template = PromptTemplate.from_template(template = intro_prompt)
+    intro_chain = LLMChain(llm = model, prompt = intro_prompt_template, 
+                            output_key = "hook1")
 
-    input_prompt_6 =f"""
-    Assume the role of a expierienced career coach. 
-    Now your task is to write an attention-grabbing hook for my cover letter that highlights my 
-    experience and qualifications in a way that shows I empathize and can successfully take on the 
-    challenges mentioned ```{challenges}``` in the job description. Consider incorporating specific examples of how I've 
-    tackled these challenges in my past work, and explore creative ways to express my enthusiasm for 
-    the opportunity. Keep my hook within 70 words.
-    And just give me hook nothing else no other text/header.
-    I will share my resume with you here it is ```{resume}```
-    Now here is the job description ```{jd}```.
-    Company name is ```{company}```.
-    """
-    hook1 = get_gemini_response(input_prompt_6)
-
-
-    input_prompt_7 = f""" here is the first hook {hook1}. Now, your task is to write 
-    the next paragraph of my cover letter by expanding on experiences from all roles 
-    from my resume that most relates to the cover letter and job description and to highlight the 
-    reasons I MATCH the job description.
-    Incorporate bulleted list of specific results and achievements within the positions held by me.
-    Some examples:-
-        Examples of leadership experience.
-        Specific improvements or goals you met.
-        State innovations/ideas where you provided value to the business.
-        List your technical skills & abilities.
-        State one or two key strengths.
-
-    Keep it bullet points and within 50 words.
-    My resume here it is ```{resume}```,
-    Now here is the job description ```{jd}```.
-    Company name is ```{company}```
-    """
-    hook2 = get_gemini_response(input_prompt_7)
-
-    input_prompt_8 = f""" here is the first hook {hook1} and the second hook {hook2}.
-    Now your task is to close out the cover letter with a final paragraph reiterating my strong interest in the role.
-    Be concise and keep it within 50 words.
-    """
-
-    hook3 = get_gemini_response(input_prompt_8)
+    body_prompt_template = PromptTemplate.from_template(template = body_prompt)
+    body_chain = LLMChain(llm = model, prompt = body_prompt_template, 
+                            output_key = "hook2")
+    
+    conclusion_prompt_template = PromptTemplate.from_template(template = conclusion_prompt)
+    conclusion_chain = LLMChain(llm = model, prompt = conclusion_prompt_template, 
+                            output_key = "hook3")
+    
+    final_chain  = SequentialChain(chains = [challenge_chain, intro_chain, body_chain, conclusion_chain],
+                                    input_variables=["jd", "resume", "company"],
+                                    output_variables=["hook1", "hook2", "hook3"])
+    final = final_chain.invoke({"jd":jd, "resume": resume, "company": company})
+    hook1, hook2, hook3  = final["hook1"], final["hook2"], final["hook3"]
     cv = f"""Hello Hiring team at {company},\n\n {hook1} \n\n {hook2} \n\n {hook3} \n\n Thank you for the opportunity, \n Parth Jain"""
     return cv
 
@@ -158,7 +117,7 @@ if __name__ == "__main__":
     Are excited about the adventure of building a company!
     """
     file = "/Users/parthjain/Desktop/jobs/templates/backend/Parth_jain_resume.pdf"
-    cover ="/Users/parthjain/Desktop/jobs/templates/backend/Parth Jain_cover_letter.docx"
+    cover ="/Users/parthjain/Desktop/jobs/templates/backend/Parth_Jain_cover_letter.docx"
     doc = Document(cover)
     resume = input_pdf_setup(file)
     doc.tables[0].rows[1].cells[1].text = cover_letter(jd, resume, "Latch")
@@ -169,5 +128,5 @@ if __name__ == "__main__":
     # Apply the new style to each paragraph
     for paragraph in doc.tables[0].rows[1].cells[1].paragraphs:
         paragraph.style = doc.styles['NewStyle']
-    doc.save('/Users/parthjain/Desktop/jobs/templates/backend/Parth Jain_cover_letter1.docx')
+    doc.save('/Users/parthjain/Desktop/jobs/templates/backend/Parth_Jain_cover_letter1.docx')
 
