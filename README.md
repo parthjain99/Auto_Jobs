@@ -7,9 +7,7 @@ as it creates a separate folder for each company.*
 
 ## Demo
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uD15hxrJPgU?si=Q-ThaGRdF-kPOuXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+https://www.youtube.com/embed/uD15hxrJPgU?si=Q-ThaGRdF-kPOuXk
 
 ## *Getting Started*
 
