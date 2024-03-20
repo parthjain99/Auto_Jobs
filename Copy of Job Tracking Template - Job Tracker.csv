@@ -1,0 +1,587 @@
+COMPANY,JOB TITLE,LOCATION,JOB DESCRIPTION LINK,SOURCE,REFERRED BY,SALARY,BENEFITS,APP SUBMITTED DATE,TOTAL INTERVIEWS
+Amex,Digital data analyst,,"he Merchant Digital Analytics & Research team owns UX research, data capability, and digital analytics for merchant-facing digital experiences. These include secure servicing journeys such as online statements and disputes, and publicly available resources such as the merchant-focused Shop Small landing page. Our high-performing team collects and synthesizes a variety of data inputs to understand user needs and present a view of product performance and recommendations to product teams and senior leadership. Data sources we draw on include big data tables (Cornerstone/Google Cloud Platform), Adobe Analytics and Qualtrics.
+
+We are seeking a Digital Analyst. This entry-level role is ideal for someone who is looking to gain experience in digital data collection; analyzing data from disparate sources to solve business problems; and working across functions to build and measure the best possible digital experiences. 
+The position is hybrid, with the option to work from home up to two days per week. The remaining three days per week will be in our New York City offices.
+
+
+Key responsibilities
+
+Ensure data accuracy by conducting thorough, well-documented QA of tagging implementations, and working with technology teams to ensure problems are understood and remediated
+Assist with implementation of Qualtrics onsite surveys
+Own and maintain a portfolio of recurring reports, alerts, and dashboards
+Work in close collaboration with product owners, technology teams and marketing partners to communicate product performance and stay informed of product changes
+Leverage qualitative, quantitative, and demographic data to analyze product performance and make recommendations
+Manage ad-hoc requests for digital data analysis from a variety of stakeholder teams
+Present findings and outcomes to all levels of the organization with confidence and clarity
+
+Required Qualifications
+
+Excellent communication and documentation skills
+Ability to excel as a team player in a fast-paced, complex business environment and rigorously prioritize competing initiatives
+Ability to operate effectively under changing conditions
+Drive for excellence, with the desire to optimize processes for best efficiency and results
+Analytical curiosity to observe and understand human behavior on digital platforms
+Basic understanding of web technologies like HTML and JavaScript
+1-2 years of experience with SQL or equivalent educational background, with capability to join, manipulate and summarize large datasets
+1-2 years professional experience or equivalent educational backgroundquit",,,,,1/31/24,
+BE,Viasat,,"Understand software written in Ruby, typescript and javascript, built and deployed on multi-node, globally distributed Linux virtual hosts
+Experience with Ruby on Rails, javascript and Angular frameworks
+Experience performing similar software coding work
+Work in person 2-3 times a week in Viasat's Seattle office, and otherwise remotely
+Possess strong communication and teamwork skills
+Work well with a small team in the U.S. Pacific and Europe time zones, in person and remotely, to:
+understand bug and feature descriptions
+learn and leverage team knowledge of system architecture, design, and past decision reasoning, as needed
+implement features and bug fixes in the code
+work often with a test-driven development approach
+update and maintain a comprehensive regression test suite
+review code written by other team members
+incorporate feedback from other team members
+help test and validate code changes written by other team members
+participate in design discussions about possible solutions to new system requirements and goals
+work at times in coordination with other team members and at times solo
+help document the systems and communicate about them with the larger company workforce
+provide sporadic technical support on provisioning systems to operations staff at times under time pressure
+Postgresql, Groovy, Redis, Lua, Jenkins, Python, Java, Nodejs, Docker, RPM, and bash scripting are all helquit
+exit
+exit
+",,,,,1/31/24,
+BE,OmniAi,,"Company Overview
+OmniAI is at the forefront of artificial intelligence technology, developing cutting-edge solutions that are transforming industries. Our team is composed of innovators and experts who are passionate about pushing the boundaries of what AI can achieve.
+
+Job Title
+Artificial Intelligence Engineer
+
+Job Location
+San Francisco, CA
+
+Experience Level
+We are looking for candidates with a range of experience, from fresh graduates to those with up to 5 years in the field.
+
+Required Skills
+Proficiency in TypeScript
+Experience with PostgreSQL
+Familiarity with Docker and containerization
+Role Description
+As an Artificial Intelligence Engineer at OmniAI, you will be tasked with developing and deploying AI models that will drive innovation and efficiency. You will work closely with a team of talented engineers and data scientists to build scalable AI solutions.
+
+Responsibilities
+Design and implement AI algorithms and models
+Collaborate with cross-functional teams to integrate AI features
+Maintain and optimize existing AI systems
+Stay up-to-date with the latest AI trends and technologies
+Qualifications
+Bachelor's or Master's degree in Computer Science, AI, Machine Learning, or related field
+0-5 years of relevant experience in AI or software development
+Strong problem-solving and analytical skills
+Excellent communication and teamwork abilitiesquit",,,,,2/1/24,
+BE,MasterCard,,"itle and Summary
+
+Software Engineer I
+Who is Mastercard?
+
+Mastercard is a global technology company in the payments industry. Our mission is to connect and power an inclusive, digital economy that benefits everyone, everywhere by making transactions safe, simple, smart, and accessible. Using secure data and networks, partnerships and passion, our innovations and solutions help individuals, financial institutions, governments, and businesses realize their greatest potential.
+
+Our decency quotient, or DQ, drives our culture and everything we do inside and outside of our company. With connections across more than 210 countries and territories, we are building a sustainable world that unlocks priceless possibilities for all.
+
+Overview
+
+The Open Banking Analytics team is looking for a Software Engineer II to drive our analytics products forward by consistently innovating and problem-solving. The ideal candidate is passionate about software optimization, intellectually curious, and a team player.
+
+Role
+
+In this position, you will:
+
+• Develop high quality, secure, scalable software solutions based on technical requirements
+• Partner with Data Science and Product teams to identify business opportunities, solve problems, and deliver solutions.
+• Program, test, document, and maintain applications in adherence with MasterCard standards, processes, and best practices.
+• Contribute ideas and actively look for opportunities to enhance the team standards and improve efficiency.
+• Participate in on-call pager support rotation of our live services.
+
+All About You
+
+The ideal candidate for this position should:
+
+• Have a knowledge and understanding of Software Engineering Concepts and Methodologies
+• Have experience with python, or an eagerness to learn python
+• Always look for potential solutions to solve problems
+• Have good exposure to programming in an object oriented language, SQL, git, REST APIs, unit testing, and documentation
+
+Other desired qualities include:
+• Be skilled at explaining technical problems succinctly and clearly
+• Ability to work as a member of a geographically distributed project team
+",,,,,2/1/24,
+BE,Mastercard-Open,,"ur Purpose
+
+We work to connect and power an inclusive, digital economy that benefits everyone, everywhere by making transactions safe, simple, smart and accessible. Using secure data and networks, partnerships and passion, our innovations and solutions help individuals, financial institutions, governments and businesses realize their greatest potential. Our decency quotient, or DQ, drives our culture and everything we do inside and outside of our company. We cultivate a culture of inclusion for all employees that respects their individual strengths, views, and experiences. We believe that our differences enable us to be a better team – one that makes better decisions, drives innovation and delivers better business results.
+
+Title and Summary
+
+Software Engineer I
+Who is Mastercard?
+
+Mastercard is a global technology company in the payments industry. Our mission is to connect and power an inclusive, digital economy that benefits everyone, everywhere by making transactions safe, simple, smart, and accessible. Using secure data and networks, partnerships and passion, our innovations and solutions help individuals, financial institutions, governments, and businesses realize their greatest potential.
+
+Our decency quotient, or DQ, drives our culture and everything we do inside and outside of our company. With connections across more than 210 countries and territories, we are building a sustainable world that unlocks priceless possibilities for all.
+
+Overview
+
+The Open Banking Analytics team is looking for a Software Engineer II to drive our analytics products forward by consistently innovating and problem-solving. The ideal candidate is passionate about software optimization, intellectually curious, and a team player.
+
+Role
+
+In this position, you will:
+
+• Develop high quality, secure, scalable software solutions based on technical requirements
+• Partner with Data Science and Product teams to identify business opportunities, solve problems, and deliver solutions.
+• Program, test, document, and maintain applications in adherence with MasterCard standards, processes, and best practices.
+• Contribute ideas and actively look for opportunities to enhance the team standards and improve efficiency.
+• Participate in on-call pager support rotation of our live services.
+
+All About You
+
+The ideal candidate for this position should:
+
+• Have a knowledge and understanding of Software Engineering Concepts and Methodologies
+• Have experience with python, or an eagerness to learn python
+• Always look for potential solutions to solve problems
+• Have good exposure to programming in an object oriented language, SQL, git, REST APIs, unit testing, and documentation
+
+Other desired qualities include:
+• Be skilled at explaining technical problems succinctly and clearly
+• Ability to work as a member of a geographically distributed project team
+
+Corporate Security Responsibility
+
+Every person working for, or on behalf of, Mastercard is responsible for information security. All activities involving access to Mastercard assets, information, and networks comes with an inherent risk to the organization and therefore, it is expected that the successful candidate for this position must:",,,,,2/1/24,
+BE,Affirm,,"Affirm is reinventing credit to make it more honest and friendly, giving consumers the flexibility to buy now and pay later without any hidden fees or compounding interest.
+
+The Affirm Card Engineering team is looking for a passionate Software Engineer to help build the tools and systems that we use to manage money movement, bank data integration & merchant data. Affirm Card is Affirm’s newest financial product that marries the functionality of a debit card with access to Affirm's buy now pay later financing options. Our ability to move money effectively is critical to our ability to reach new customers and improve financial lives. We work closely with experience, data science, product, and a wide range of engineering teams to both leverage existing systems and build new systems.
+
+This role requires a high level of technical capability, strong cross functional communication, and a creative mindset. Our work needs to be correct, scalable, and extensible. Our job is to have an industry leading money movement system to empower our product.
+
+Affirm is experiencing explosive growth with millions of customers across thousands of merchants in-store and online, and your contributions will be a key enabler of that growth. Come join us as we build a beloved, lasting financial services brand predicated on honesty and trust. It’s going to be an amazing ride!
+
+What you'll do
+Drive planning and prioritization of projects based on product, technical, and business goals by leveraging relevant resources and data. 
+Work cross functionally with colleagues in Experience, Accounting, Product, and Analytics teams to set and execute our money movement strategy for the Debit card
+Build APIs and data models to work within micro-service and event-driven architectures
+Take an active role in the processes that support team growth and efficiency
+What We Look For:
+Bachelor's degree in Computer Science, a related field, or equivalent training/fellowship/work experience
+Experience with one of the following languages: Python, C/C++, Java, Kotlin, Javascript, reactJS and/or similar languages
+Familiarity with deployment and automated testing frameworks
+Ability to collaborate with your team in a fast-paced environment
+Passion and drive to change consumer banking for the better!quit",,,,,2/2/24,
+ml,axiss,,"An exceptional Artificial Intelligence Engineer driven by creating groundbreaking technology to innovate the healthcare value chain. Axxess is at the forefront of digital reinvention of healthcare, helping clients reimagine how advanced technology aids in the delivery of care in the home to patients and operational effectiveness to enterprises. This is an opportunity to join a dynamic team, using deep learning, neuro-linguistic programming (NLP), computer vision, chatbots, and robotics to help us improve various business outcomes and drive innovation. We seek problem-solvers to thrive in our environment by making a lasting impact on care model innovations, and digital transformation as we develop technology to make lives better. 
+
+ 
+
+What you will experience… 
+
+Work from Anywhere - Flexibility that allows you to work where you are most comfortable, whether at home, at work, or a combination of both   
+A fast-paced, collaborative team-oriented environment that encourages everyone to bring their authentic self to work every day.  
+Professional development for career growth and advancement  
+Competitive compensation with full selection of benefits, including company-matching 401k contributions and 20 days of paid time off + holidays + birthdays 
+ 
+
+Who we are... 
+
+Axxess creates a complete suite of easy-to-use, innovative software solutions, empowering home health, home care and hospice providers to grow their business while making lives better. Our collaborative culture focuses on innovation and excellence, and we are proudly recognized nationally as a “Best Place to Work”. 
+
+ 
+
+What you will do… 
+
+Work on functional design, process design (including scenario design, flow mapping), prototyping, testing, training, and defining support procedures, in collaboration with a diverse solutions delivery team 
+Support our Solutions Delivery team in conducting assessments of the AI (Artificial Intelligence) and automation market and competitor landscape 
+Collaborate with stakeholders and project teams supporting process, research and development to meet the needs of our AI strategy 
+Possess a deep understanding of our business and collaborate with teams on how integrating AI capabilities can help lead to solutions 
+Contribute to cross-functional teams in identifying and prioritizing key areas of our industry where AI solutions can drive significant business benefit 
+Analyze and explain AI and machine learning (ML) solutions while setting and maintaining high ethical standards 
+Knowledgeable of a broad range of technology, strategy, and policy and issues associated with AI in healthcare 
+ 
+
+What you bring…  
+
+ 
+
+Bachelor's or master's degree in computer science or related field 
+Experience with cloud environments 
+Experience applying AI to practical and comprehensive technology solutions 
+Experience with ML, deep learning, R, TensorFlow, Python, NLP, 
+Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns 
+Experience in REST API development, NoSQL database design, and RDBMS design and optimizations 
+Experience with innovation accelerators is a plus 
+Desire and ability to work effectively in an entrepreneurial and dynamic environment   quit",,,,,2/24/24,
+ml,axiss,,"An exceptional Artificial Intelligence Engineer driven by creating groundbreaking technology to innovate the healthcare value chain. Axxess is at the forefront of digital reinvention of healthcare, helping clients reimagine how advanced technology aids in the delivery of care in the home to patients and operational effectiveness to enterprises. This is an opportunity to join a dynamic team, using deep learning, neuro-linguistic programming (NLP), computer vision, chatbots, and robotics to help us improve various business outcomes and drive innovation. We seek problem-solvers to thrive in our environment by making a lasting impact on care model innovations, and digital transformation as we develop technology to make lives better. 
+
+ 
+
+What you will experience… 
+
+Work from Anywhere - Flexibility that allows you to work where you are most comfortable, whether at home, at work, or a combination of both   
+A fast-paced, collaborative team-oriented environment that encourages everyone to bring their authentic self to work every day.  
+Professional development for career growth and advancement  
+Competitive compensation with full selection of benefits, including company-matching 401k contributions and 20 days of paid time off + holidays + birthdays 
+ 
+
+Who we are... 
+
+Axxess creates a complete suite of easy-to-use, innovative software solutions, empowering home health, home care and hospice providers to grow their business while making lives better. Our collaborative culture focuses on innovation and excellence, and we are proudly recognized nationally as a “Best Place to Work”. 
+
+ 
+
+What you will do… 
+
+Work on functional design, process design (including scenario design, flow mapping), prototyping, testing, training, and defining support procedures, in collaboration with a diverse solutions delivery team 
+Support our Solutions Delivery team in conducting assessments of the AI (Artificial Intelligence) and automation market and competitor landscape 
+Collaborate with stakeholders and project teams supporting process, research and development to meet the needs of our AI strategy 
+Possess a deep understanding of our business and collaborate with teams on how integrating AI capabilities can help lead to solutions 
+Contribute to cross-functional teams in identifying and prioritizing key areas of our industry where AI solutions can drive significant business benefit 
+Analyze and explain AI and machine learning (ML) solutions while setting and maintaining high ethical standards 
+Knowledgeable of a broad range of technology, strategy, and policy and issues associated with AI in healthcare 
+ 
+
+What you bring…  
+
+ 
+
+Bachelor's or master's degree in computer science or related field 
+Experience with cloud environments 
+Experience applying AI to practical and comprehensive technology solutions 
+Experience with ML, deep learning, R, TensorFlow, Python, NLP, 
+Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns 
+Experience in REST API development, NoSQL database design, and RDBMS design and optimizations 
+Experience with innovation accelerators is a plus 
+Desire and ability to work effectively in an entrepreneurial and dynamic environment   quit",,,,,2/24/24,
+BE,linkedIN,,"t LinkedIn, we trust each other to do our best work where it works best for us and our teams. This role offers a hybrid work option, meaning you can both work from home and commute to a LinkedIn office, depending on what’s best for you and when it is important for your team to be together.
+
+Responsibilities:
+· You will scale distributed applications, make architectural trade-offs applying synchronous and asynchronous design patterns, write code, and deliver with speediness and quality.
+· You will develop multi-tier scalable, high-volume performing, and reliable user-centric applications that operate 24x7.
+· You will produce high quality software that is unit tested, code reviewed, and checked in regularly for continuous integration.
+· You will provide technical leadership, driving and performing best engineering practices to initiate, plan, and execute large-scale, cross functional, and company-wide critical programs. Identify, leverage, and successfully evangelize opportunities to improve engineering productivity.
+
+Basic Qualifications:
+· 2+ years of relevant work experience.
+· MS or PhD in Computer Science or related technical discipline
+
+Preferred Qualifications:
+· Experience in designing and building infrastructure and web services at large scale.
+· Expert knowledge of computer science, with strong competencies in data structures, algorithms, and software design.
+· Proven coding skills in Python or JavaScript/AJAX, database design and SQL, and/or knowledge of TCP/IP and network programming.
+· Experience building web applications and services with IDEs, ant, junit, etc.
+· Experience with relational databases (transactional and non-transactional), database architecture, and distributed transaction management.
+
+Suggested Skills:
+· API Development
+· Programming Proficiency
+· Performance Optimization and Monitoring
+· Collaboration
+
+You will Benefit from our Culture:quit",,,,,2/26/24,
+BE,Walmart,,"The Collaboration Product team within ADE focuses on delivering scalable and valuable experiences for all Walmart associates to instantly chat and collaborate across multiple time zones and locations. We are increasing productivity by connecting associates to each other and to the company on several platforms. The scope of our solutions includes Walmart’s chat, file sharing, video meetings, and whiteboarding tools. 
+ 
+
+
+About Team: 
+Our team is focused on developing a streamlined, dependable company that includes service operations and technology solutions for Finance, People, and Associate Digital Experience (ADE). We also provide a variety of services such as procurement, supplier portfolio management, merchandising master data, and analytics. From developing HR chatbots and virtual assistants to creating invoice solutions and facilitating legal changes, we help drive efficiency across Walmart globally.
+
+What you'll do:
+Participate as a member of the software scrum team -- taking on sprint work and delivering iterations to our applications
+Write code to build new and next functionality for our products
+Develop processes that save Walmart millions of dollars annually
+Troubleshoot and support issues and outages (hopefully very few!)
+
+
+What you'll bring:
+Tangible software engineering experience as a member of an agile team
+Experience with NodeJS as primary coding language
+Experience monitoring and managing already deployed applications to ensure health of existing processes
+Troubleshooting expertise to identify where something is going wrong in a workflow
+",,,,,2/27/24,
+ML,Novellia,,"We are seeking a skilled Platform Engineer specializing in Machine Learning and Artificial Intelligence to join our team. In this role, you will be responsible for architecting, developing, and maintaining the backend infrastructure to support high-volume data processing and machine learning pipelines. Your expertise will be pivotal in ensuring seamless delivery of model inference at scale, optimizing model performance, and building scalable ML/AI products. This role is either for a head of, lead or senior role depending on experience.
+
+Responsibilities:
+
+Design, develop, and maintain the backend infrastructure to support high volumes of data processing and machine learning pipelines.
+
+Collaborate with cross-functional teams to architect and implement scalable and performant solutions for model training, inference, and optimization.
+
+Develop and deploy ML/AI models in production environments, ensuring reliability, scalability, and efficiency.
+
+Implement best practices for MLOps and DevOps to streamline model development, deployment, and monitoring processes.
+
+Optimize model performance through experimentation, tuning, and refinement of algorithms and techniques.
+
+Develop expertise in ML/AI approaches for unstructured text data and implement solutions to extract insights and deliver value to users.
+
+Stay updated on the latest advancements in machine learning, artificial intelligence, and data engineering to drive innovation and excellence in our platform.
+
+Requirements:
+
+Bachelor's degree in Computer Science, Engineering, or related field; Master's degree preferred.
+
+Proven experience in building backend infrastructure and platforms for processing high volumes of data and running machine learning pipelines.
+
+Strong programming skills in languages such as Python, Java, or Scala.
+
+Experience with cloud platforms (e.g., AWS, Azure, GCP) and containerization technologies (e.g., Docker, Kubernetes).
+
+Solid understanding of machine learning algorithms, model training, and inference techniques.
+
+Proficiency in MLOps practices and tools for model deployment, monitoring, and lifecycle management.
+
+Familiarity with DevOps practices and tools for continuous integration and deployment (CI/CD).
+
+Excellent problem-solving skills and ability to work in a fast-paced, collaborative environment.
+
+Strong communication skills and ability to articulate technical concepts to non-technical stakeholders.
+
+
+Bonus Skills:
+
+Experience with natural language processing (NLP) techniques and tools for analyzing unstructured text data.
+
+Knowledge of distributed computing frameworks (e.g., Spark, Hadoop) and big data processing technologies.
+
+Familiarity with time-series data analysis and forecasting techniques.
+
+Contributions to open-source projects or active participation in the developer community.
+",,,,,2/27/24,
+BE,IBM,,"Introduction
+At IBM, work is more than a job – it’s a calling: To build. To design. To code. To consult. To think along with clients and sell. To make markets. To invent. To collaborate. Not just to do something better, but to attempt things you’ve never thought possible. Are you ready to lead in this new era of technology and solve some of the world’s most challenging problems? If so, lets talk.
+
+Your Role and Responsibilities
+Start dates for this position are January 2024 and later.
+The position is IBM US Office-based in Lowell, MA.
+When working in this abstract, fast pace and continuously changing tech world, resilience, commitment, and curiosity serve as the foundation for success as an IBM Developer.
+
+You will participate in many aspects of the software development lifecycle, such as design, code implementation, testing, and support. You will work to create software that is of high quality and meets our clients’ needs. You will also have the opportunity to become a contributor within Open Source communities across multiple disciplines.
+
+In your role, you will be supported by mentors and coaches who will encourage you to challenge the norm, investigate ideas outside of your role, and come up with creative solutions resulting in ground-breaking impact for the wider business, our external clients, & their customers. Our culture of flexibility and freedom are pillars that embrace long-term career growth and learning opportunities in an environment that highlights your unique skills and experience.
+
+As a Backend Developer you will:
+
+Work with client-server architectures, networking protocols, application development, and using databases.
+Create Application Programming Interfaces (APIs) that are clean, well-documented, and easy to use.
+Design and code servers, services, applications, and databases that are reusable, scalable, and meet critical architecture goals.
+Have an understanding of, or experience with, Agile development methodology.
+Create and configure Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS) applications. Design and implement large scale systems and Service Oriented Architectures (SOA) that enable continuous delivery.
+Who You Are:
+
+Highly motivated and have a passion for creating and supporting great products.
+Thrive on collaboration, working side by side with people of all backgrounds and disciplines, and you have very strong verbal and written communication skills.
+Great at solving problems, debugging, troubleshooting, designing, and implementing solutions to complex technical issues.
+Have a basic understanding of software development and programming languages.
+Have the ability to learn new skills quickly and use the skills efficiently.
+
+Required Technical and Professional Expertise
+
+Must have basic knowledge in one or more of the following technology areas: C++, C, Java, Ruby, Python, Perl, SQL
+Knowledge working with servers, applications and databases
+Familiarity with APIs
+Basic knowledge of operating systems and how they work (i.e. Operating systems courses); Container technologies; Internet Services; and/or Managed Services
+
+Preferred Technical and Professional Expertise
+
+Minimum of 1 year experience in one or more of the following technology areas: C++, C, Java, Ruby, Python, Perl, SQL
+Minimum of 1 year experience with APIs
+One or more internships or co-op experience",,,,,3/1/24,
+ML,Zelus,,"We are seeking Machine Learning Engineers with a passion for sports to implement, automate, and optimize the quantitative models that power our world-class sports intelligence platforms in baseball, basketball, cricket, eSports, football (American), golf, hockey, soccer, and tennis. Through your work, you can support the professional teams in our exclusive partner network in their efforts to compete and win championships.
+
+Zelus Analytics is a fully remote company working directly with teams across the NBA, MLB, NFL, IPL and NHL, in addition to a number of soccer teams around the globe. Zelus unites a fast-growing startup environment with a research-focused culture that embraces our core values of integrity, innovation, and inclusion. We pride ourselves on providing meaningful mentorship that offers our team the opportunity to develop and expand their skill sets while also engaging with the broader analytics community. In doing so, we hope to create a new path for a more diverse group of highly talented people to push the cutting edge of sports analytics.
+
+We believe that a diverse team is vital to building the world’s best sports intelligence platform. Thus, we strongly encourage you to apply if you identify with any marginalized community across race, ethnicity, gender, sexual orientation, veteran status, or disability. At Zelus, we are committed to creating an inclusive environment where all of our employees are enabled and empowered to succeed and thrive.
+
+As Zelus employees advance in experience and level, they are expected to build on their competencies and expertise and demonstrate increasing impact, independence, and leadership within their roles.
+
+More specifically, as a Zelus Machine Learning Engineer, you will be expected to:
+
+Optimize, automate, and validate quantitative models built using statistics, machine learning, optimization, and simulation
+Develop, schedule, monitor, and maintain model training and prediction workflows
+Coordinate with broader engineering team to plan and implement changes to core infrastructure to support one or more sports
+Collaborate with data scientists to define and manage model productionalization and platform release plans
+Deploy REST APIs on top of fitted models using distributed computation to support real-time, client-facing integration
+Collaborate and communicate effectively in a distributed work environment
+Fulfill other related duties and responsibilities, including rotating platform support
+Additionally, a Machine Learning Engineer II will be expected to:
+
+Develop and maintain abstractions for model deployment that allow our workflows to run efficiently and be easily adapted to future use cases
+Assess, provision, monitor, and maintain the appropriate infrastructure and tooling to execute model training and prediction workflows
+Create visualizations with dashboard or application development frameworks to deliver data insights to our clientsquit",,,,,3/8/24,
+BE,Affirm,,"now and pay later without any hidden fees or compounding interest.
+
+The Affirm Card Engineering team is looking for a passionate Software Engineer to help build the tools and systems that we use to manage money movement, bank data integration & merchant data. Affirm Card is Affirm’s newest financial product that marries the functionality of a debit card with access to Affirm's buy now pay later financing options. Our ability to move money effectively is critical to our ability to reach new customers and improve financial lives. We work closely with experience, data science, product, and a wide range of engineering teams to both leverage existing systems and build new systems.
+
+What you'll do
+Drive planning and prioritization of projects based on product, technical, and business goals by leveraging relevant resources and data. 
+Work cross functionally with colleagues in Experience, Accounting, Product, and Analytics teams to set and execute our money movement strategy for the Debit card
+Build APIs and data models to work within micro-service and event-driven architectures
+Take an active role in the processes that support team growth and efficiency
+What We Look For:
+Bachelor's degree in Computer Science, a related field, or equivalent training/fellowship/work experience
+Experience with one of the following languages: Python, C/C++, Java, Kotlin, Javascript, reactJS and/or similar languages
+Familiarity with deployment and automated testing frameworks
+Ability to collaborate with your team in a fast-paced environment
+Passion and drive to change consumer banking for the better!
+exit
+exit",,,,,3/15/24,
+ML,Adderant,,"Role Description
+We are looking for an  AI Engineer to join our team and help us develop and deploy innovative AI solutions for various business problems. You will work with senior AI engineers, data scientists, and software developers to design, implement, and test AI models and applications using state-of-the-art tools and frameworks.
+
+Qualifications
+2+ years of experience in AI, machine learning, deep learning, or data science
+Proficiency in Python and common AI libraries, such as TensorFlow, PyTorch, Scikit-learn, LangChain, etc.
+Familiarity with cloud platforms and services, such as AWS, Azure, or Google Cloud
+Ability to work independently and as part of a team
+Strong communication and problem-solving skills
+Additional skills:
+Experience or knowledge in using Jupyter Notebooks, either in VS Code or Azure ML Studio
+Experience or knowledge in using Pandas for data manipulation and analysis
+Experience or knowledge in using Git for version control and collaboration
+Experience or knowledge in using Huggingface Transformers for various natural language processing tasks, such as text generation, classification, tokenization, etc.
+Responsibilities
+Design, develop, and deploy AI models and pipelines for various use cases, such as computer vision, natural language processing, recommender systems, etc.
+Perform data analysis, preprocessing, and feature engineering to prepare data for AI modeling
+Apply best practices and standards for AI development, such as code quality, documentation, testing, and version control
+Research and evaluate new AI techniques and frameworks to improve the performance and efficiency of existing solutions
+Collaborate with cross-functional teams and stakeholders to understand the business requirements and deliver AI solutions that meet or exceed expectations
+Mentor and guide junior AI engineers and data scientists
+Develop and deploy high quality inferencing services
+Create applications capable of consuming inferencing services as reference for consuming applications
+Apply for this job online
+Email this job to a friend
+Share on your newsfeed
+exit",,,,,3/15/24,
+BE,Microsoft,,"Required/Minimum Qualifications
+
+Bachelor's Degree in Computer Science, or related technical discipline with proven experience coding in languages including, but not limited to, C, C++, C#, Java, JavaScript, or Python
+
+o OR equivalent experience.
+
+Other Requirements 
+
+Ability to meet Microsoft, customer and/or government security screening requirements are required for this role. These requirements include, but are not limited to the following specialized security screenings: Microsoft Cloud Background Check:
+This position will be required to pass the Microsoft Cloud background check upon hire/transfer and every two years thereafter. 
+Preferred/Additional Qualifications 
+
+Bachelor's Degree in Computer Science or related technical field AND 1+ year(s) technical engineering experience with coding in languages including, but not limited to, C, C++, C#, Java, JavaScript, or Python
+
+o OR Master's Degree in Computer Science or related technical field with proven experience coding in languages including, but not limited to, C, C++, C#, Java, JavaScript, or Python
+
+o OR equivalent experience.
+
+Experience in developing Cloud online services or experience using cloud online services.
+Experience in Distributed Big Data systemsquit",,,,,3/15/24,
+ML,ADP,,"WHAT YOU’LL DO:
+
+Here’s what you can expect on a typical day:
+
+Advanced Analytics & Predictive Modeling. You formulate analytical problems, extract & analyze data from multiple systems, summarize critical findings/insights, and develop a compelling visual representation of analyses with actionable recommendations.
+Team Collaboration. You will be part of a collaborative team, listening to needs, then finding and sharing solutions. You’re comfortable and skilled at presenting your projects and findings to both peers and leadership. You collaborate with product, design, and engineering teams to plan, design, develop and deploy high-impact data products supporting multiple products across ADP.
+Research & Development. You design and implement start-of-the-art data products, machine learning models, and systems to optimize the HCM system user experience. You continuously looking for new ways to leverage ADP data to create new products and services and find more insights. You are passionate about learning and applying new techniques within data science that leads to innovations.
+Deliver at an epic scale. You write pristine code and documentation, champion and define best practices to produce highly adaptive, high-performing, continuous learning AI models/systems.
+TO SUCCEED IN THIS ROLE:
+
+May 2024 Graduates only
+Education.  Accepting three levels of education:  Bachelor’s Degree, Master’s Degree and/or PH.D degree in Computer Science, Statistics, Engineering, or a related field.
+Communication. You are an advanced English language speaker.
+Technical skills. You have fluency in Python—including popular data science packages (pandas, sklearn, etc.), proficiency in SQL, notably writing and optimizing queries, and  strong knowledge of data structures, algorithms, and methods used in the data science field.
+ 
+
+Nice to have (optional):
+
+Knowledge of natural language processing
+Experience with integrating data products (recommender systems, classifiers, chatbots, etc.) into applications in production environments
+Exposure to Jupyter notebooks, MLflow, and/or Databricks platform
+AWS cloud solutions (S3, Glue, Lambda, SageMaker)
+Experience with distributed computing environments (Spark/Hive)quit",,,,,3/15/24,
+ML,DoorDash,,"About the Role
+We are looking for highly motivated recent college graduates at DoorDash and as a Machine Learning Engineer, you will have the opportunity to leverage our robust data and machine learning infrastructure to develop inference and ML models that impact millions of users across our three audiences and tackle our most challenging business problems. You will work with other engineers, analysts, and product managers to develop and iterate on models to help us grow our business and provide the best service quality for our customers.
+
+You’re excited about this opportunity because you will…
+Develop, maintain and ship technical elements with the support of your mentor, manager, and team members
+Act on feedback, coaching, and mentorship from your mentor and team members
+Actively learn about the elements to which you contribute
+Make a direct impact on our business by collaborating with your team to solve problems for our customers
+Build statistical and ML models that run in production to help enhance the consumer experience by reducing cancellations, pickup waiting times, delivery lateness, missing and incorrect items and non fulfilled orders. Build recommendation systems, and implement new AI solutions to expand restaurant selection and drive their growth. 
+ Own the modeling life cycle end-to-end including feature creation, model development and prototyping, experimentation, monitoring and explainability, and model maintenance
+Being exposed to new opportunities where delivery quality can be used as a lever for demand shaping, search ranking, customer segmentation, etc
+Mentor and uplevel a talented team of ML Engineers
+We’re excited about you because you have…
+B.S., M.S. in Computer Science or related disciplines with graduation date between Spring 2022 and December 2023
+At least 2 previous Software Engineering, Machine Learning internships, or equivalent work experience, with no more than 2 years of full-time work experience
+Demonstrated expertise with programming languages, e.g. python, SciKit Learn, Lightgbm, Spark MLLib, PyTorch, TensorFlow, etc
+Understanding of complex systems such as Marketplaces, and domain knowledge in two or more of the following: Machine Learning, Deep Learning, Causal Inference, Ranking, Computer vision, NLP, Operations Research, Forecasting and Experimentation
+Experience of shipping production-grade ML models and optimization systems, and designing experimentation techniques
+You’re an owner — driven, focused, and quick to take ownership of your work
+Humble — you’re willing to jump in and you’re open to feedback
+Adaptable, resilient, and able to thrive in ambiguity — things change quickly in our fast-paced startup and you’ll need to be able to keep up!
+Growth-minded — you’re eager to expand your skill set and excited to carve out your career path in a hyper-growth setting
+Desire for impact — ready to take on a lot of responsibility and work collaboratively with your team
+Nice to Haves:
+Able to analyze and improve efficiency, scalability, and stability of various systems
+Excited to develop, release, and run large-scale web applications
+Experience with solutions for systems monitoring, live deployments, and continuous integration
+Experience with real-time technology problems
+Experience working with service oriented architecture, writing APIs, and designing systemsquit
+exit",,,,,3/15/24,
+ML,Filevine,,"Design, develop, and implement NLP algorithms and techniques for text preprocessing, feature extraction, sentiment analysis, topic modeling, named entity recognition, document classification, and other related tasks.
+Develop robust classification models and frameworks using state-of-the-art machine learning and deep learning techniques for various applications, including document categorization, text classification, sentiment analysis, and recommendation systems.
+Help define workflow and data stores to get data out of unstructured stores and into usable Data Science formats. 
+Collaborate with cross-functional teams, including product owners, software developers, and domain experts, to understand business requirements and develop end-to-end solutions.
+Perform exploratory data analysis and visualization to gain insights into textual data, identify patterns, and inform feature engineering and model development.
+Evaluate and compare the performance of different (but not limited to) NLP, generative and classification models, and propose enhancements or modifications to improve their accuracy, efficiency, and scalability.
+Stay up-to-date with the latest advancements in machine learning methodologies, techniques, and frameworks, and apply them to solve complex business problems.
+Communicate findings, insights, and technical concepts effectively to both technical and non-technical stakeholders through reports, presentations, and visualizations.
+Support implementation of analytics tools and methodologies within our engineering tech stack.  
+Requirements:
+Master's or Ph.D. degree in Computer Science, Data Science, Statistics, or a related field.
+Strong background and expertise in Natural Language Processing (NLP) techniques, including text preprocessing, feature extraction, sentiment analysis, topic modeling, named entity recognition, and document classification.
+Proven experience in designing and implementing classification models and algorithms, such as Naïve Bayes, Logistic Regression, Support Vector Machines (SVM), Random Forests, Gradient Boosting, and Neural Networks.
+Proficiency in programming languages such as Python, Spark or Java, and libraries/frameworks such as NLTK, SpaCy, scikit-learn, TensorFlow, or PyTorch.
+Experience with data manipulation, analysis, and visualization using tools such as Pandas, NumPy, Matplotlib.
+Strong understanding of statistical analysis and machine learning principles, and ability to apply them to real-world legal problems.
+Solid knowledge of software development practices, version control systems, and agile methodologies.
+Excellent problem-solving skills, analytical thinking, and attention to detail.
+Effective communication skills and ability to collaborate in a team-oriented environment.
+Proven track record of delivering high-quality results on time and effectively managing high profile projects and priorities.
+Preferred Skills:
+Experience with true big data (exabytes and higher) procession practices.
+Knowledge of cloud computing platforms such as AWS, Azure, or GCP.
+Ability to mentor and educate on Data Science deployment and best practices to technical groupsexit",,,,,3/18/24,
+BE,Salesforce,,"Key Responsibilities:
+
+Architect, design, implement, test and deliver highly scalable products
+
+Master our development process, culture and code base, then improve it
+
+Work closely with a team of engineers, product managers, user experience experts and performance engineers to build new features our customers will love, adopt and use while keeping our trusted platform stable and scalable
+
+Develop test strategies, design automation frameworks, write unit/functional tests to drive up code coverage and automation metrics
+
+Analyze, design and develop test cases and implement automated test suites
+
+
+Required Skills:
+
+BS or MS in Computer Science or related technical field
+
+Academic, professional or internship experience working in a professional coding setting environment
+
+Fluency in object-oriented programming/design
+
+Academic, professional or internship experience in one of Java, Python, Javascript, HTML, SQL or C++
+
+Desired Skills:
+
+Strong analytical and problem-solving skills
+
+Team-player with the ability to work effectively and efficiently with others
+
+Be a self-starter and possess strong sense of self-motivation
+
+Experience using telemetry and metrics to drive operational excellencequit",,,,,3/19/24,
