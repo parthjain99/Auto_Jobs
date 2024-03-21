@@ -7,7 +7,7 @@ as it creates a separate folder for each company.*
 
 ## Demo
 
-https://www.youtube.com/embed/uD15hxrJPgU?si=Q-ThaGRdF-kPOuXk
+https://youtu.be/xXHOI-Lyxgw
 
 ## *Getting Started*
 
