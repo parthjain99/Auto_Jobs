@@ -6,6 +6,7 @@ from docx import Document
 from docx.shared import Pt
 from src.CSV_saving import save_to_file
 from docx.shared import RGBColor
+
 import sys
 sys.path.append("..")
 from config.config import (
@@ -69,10 +70,11 @@ style = doc.styles.add_style('NewStyle', 1)
 style.font.name = 'Calibri'
 style.font.size = Pt(12)
 style.font.color.rgb = RGBColor(0,0,0)
+style.paragraph_format.line_spacing = 1.0
 # Apply the new style to each paragraph
 for paragraph in doc.tables[0].rows[1].cells[1].paragraphs:
     paragraph.style = doc.styles['NewStyle']
-doc.save(f'{parent_dir}/{sys.argv[2]}/{FName}_{LName}_cover_letter1.docx')
-
-save_to_file(company_name=sys.argv[2], jd=jd, role=sys.argv[1])
+doc.save(f'{parent_dir}/{sys.argv[2]}/{FName}_{LName}_cover_letter.docx')
 print("Cover letter Saved")
+save_to_file(company_name=sys.argv[2], jd=jd, role=sys.argv[1])
+print("Job Saved to CSV")
