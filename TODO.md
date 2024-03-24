@@ -1,0 +1,6 @@
+- [ ] Integrate Poetry for better versioning and dependencies
+- [ ] Better prompts for resume suggestion generation.
+- [ ] Cover letter prompts are good, but sometimes they generate text that makes it look like AI generated. (enhancements)
+- [ ] Make a proper CLI application and launch it.
+- [ ] Multiple Model support especially LM studio.
+- [ ] Chat with your information with a RAG pipeline.
