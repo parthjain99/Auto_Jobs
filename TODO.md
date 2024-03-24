@@ -4,3 +4,4 @@
 - [ ] Make a proper CLI application and launch it.
 - [ ] Multiple Model support especially LM studio.
 - [ ] Chat with your information with a RAG pipeline.
+- [ ] Proper structure for make files.py
