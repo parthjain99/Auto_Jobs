@@ -11,7 +11,7 @@ from config.config import (challenge_prompt, intro_prompt, body_prompt,
                            conclusion_prompt, get_match_prompt, eval_prompt,
                            FName, LName)
 
-model = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
+model = ChatGoogleGenerativeAI(model="gemini 1.5 Flash")
 
 
 def input_pdf_setup(uploaded_file):
