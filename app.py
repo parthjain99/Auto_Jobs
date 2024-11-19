@@ -3,7 +3,7 @@ import streamlit as st
 from src.google_smart import *
 
 # Title of the app
-st.title('Hello World!')
+st.title('Resume Evaluation and Cover Letter generation')
 
 # Upload resume file
 resume_file = st.file_uploader('Upload your resume', type=['pdf', 'docx'])
