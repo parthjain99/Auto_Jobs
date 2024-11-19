@@ -18,23 +18,14 @@ if resume_file:
 jd = st.text_area("Enter job description")
 company = st.text_input("Enter Company name")
 
-# Define asynchronous tasks
-async def process_inputs(jd, txt, company):
-    eval_task = asyncio.create_task(get_eval(jd, txt))
-    cover_task = asyncio.create_task(cover_letter(jd, txt, company))
-
-    # Wait for both tasks to complete
-    eval_file = await eval_task
-    cv, file = await cover_task
-    return eval_file, cv, file
-
 # Submit button
 if st.button("SUBMIT"):
     if not resume_file or not jd or not company:
         st.warning("Please upload a resume, enter a job description and company name before submitting.")
     else:
         # Run concurrent tasks
-        eval_file, cv, file = asyncio.run(process_inputs(jd, txt, company))
+        eval_file = get_eval(jd, txt)
+        cv, file = cover_letter(jd, txt, company)
 
         # Display evaluation result
         st.subheader("Evaluation Result")
@@ -42,7 +33,7 @@ if st.button("SUBMIT"):
 
         # Display Cover Letter and Download Button
         st.subheader("Cover Letter")
-        st.text_area(label ="Cover Letter", value = cv)
+        st.text_area(label ="Cover Letter", value = cv, height = 500)
         st.download_button(
             label='Download file',
             data=file,

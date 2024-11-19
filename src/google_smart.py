@@ -11,7 +11,7 @@ from config.config import (challenge_prompt, intro_prompt, body_prompt,
                            conclusion_prompt, get_match_prompt, eval_prompt,
                            FName, LName)
 
-model = ChatGoogleGenerativeAI(model="gemini 1.5 Flash")
+model = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
 
 
 def input_pdf_setup(uploaded_file):
@@ -31,12 +31,12 @@ def input_pdf_setup(uploaded_file):
         return txt
 
 
-async def get_eval(jd, resume):
+def get_eval(jd, resume):
     if resume is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
         eval_prompt_template = PromptTemplate.from_template(template = eval_prompt)
         eval_chain = LLMChain(prompt = eval_prompt_template ,llm = model, output_key = "eval_score")
-        response = await eval_chain.ainvoke({"resume":resume, "jd":jd})
+        response = eval_chain.invoke({"resume":resume, "jd":jd})
         return response['eval_score']
 
 
@@ -52,7 +52,7 @@ def get_match_score(jd, resume):
         print("Please upload the resume")
 
 
-async def cover_letter(jd, resume, company):
+def cover_letter(jd, resume, company):
     challenge_prompt_template = PromptTemplate.from_template(template = challenge_prompt)
     challenge_chain = LLMChain(llm = model, prompt = challenge_prompt_template, 
                                 output_key = "challenges")
@@ -72,7 +72,7 @@ async def cover_letter(jd, resume, company):
     final_chain  = SequentialChain(chains = [challenge_chain, intro_chain, body_chain, conclusion_chain],
                                     input_variables=["jd", "resume", "company"],
                                     output_variables=["hook1", "hook2", "hook3"])
-    final = await final_chain.ainvoke({"jd":jd, "resume": resume, "company": company})
+    final = final_chain.invoke({"jd":jd, "resume": resume, "company": company})
     hook1, hook2, hook3  = final["hook1"], final["hook2"], final["hook3"]
     cv = f"""Hello Hiring team at {company},\n\n {hook1} \n\n {hook2} \n\n {hook3} \n\n Thank you for the opportunity, \n {FName} {LName}"""
     doc = Document()

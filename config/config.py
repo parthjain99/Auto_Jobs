@@ -42,43 +42,38 @@ class rolePath(Enum):
 Dont modify the below code
 unless you know what you are doing
 """
-challenge_prompt = """Assume the role of a expierienced career coach.
-    I want to stand out from other job seekers by reverse engineering the job descripion to uncover what the company is exactly lookin for.
-    Analyze the job description and identify biggest challenge someone in this role would face. day to day. 
-    Give me root cause of the problem. Now here is the job description ```{jd}```"""
+challenge_prompt = """
+Act as an experienced career coach. Analyze the job description to uncover the primary challenges 
+someone in this role would face daily. Identify the root causes of these challenges. 
+Here is the job description: ```{jd}```.
+"""
 
-intro_prompt = """Assume the role of a expierienced career coach. 
-    Now your task is to write an attention-grabbing hook for my cover letter that highlights my 
-    experience and qualifications in a way that shows I empathize and can successfully take on the 
-    challenges mentioned ```{challenges}``` in the job description. Consider incorporating specific examples of how I've 
-    tackled these challenges in my past work, and explore creative ways to express my enthusiasm for 
-    the opportunity. Keep my hook within 70 words.
-    And just give me hook nothing else no other text/header.
-    I will share my resume with you here it is ```{resume}```
-    Now here is the job description ```{jd}```.
-    Company name is ```{company}```."""
+intro_prompt = """
+Act as an experienced career coach. Write an engaging hook for my cover letter, highlighting my 
+experience and qualifications to show empathy and capability in addressing the challenges: ```{challenges}```. 
+Use specific examples from my resume to demonstrate past success with similar challenges. 
+Keep the hook within 70 words. 
+My resume: ```{resume}```. 
+Job description: ```{jd}```. 
+Company: ```{company}```. 
+Provide only the hook, no extra text.
+"""
 
-body_prompt = """ here is the first hook {hook1}. Now, your task is to write 
-    the next paragraph of my cover letter by expanding on experiences from all roles 
-    from my resume that most relates to the cover letter and job description and to highlight the 
-    reasons I MATCH the job description.
-    Incorporate small paragraphs of specific results and achievements within the positions held by me.
-    Some examples:-
-        Leadership experience.
-        Specific improvements or goals I met.
-        State innovations/ideas where I provided value to the business.
-        List technical skills & abilities.
-        State one or two key strengths.
+body_prompt = """
+Using the first hook: ```{hook1}```, write the next paragraph of my cover letter. Expand on relevant 
+experiences from my resume to show alignment with the job description. Include specific results, achievements, 
+leadership examples, innovations, technical skills, and key strengths. 
+Keep the paragraph concise, up to 70 words. 
+My resume: ```{resume}```. 
+Job description: ```{jd}```. 
+Company: ```{company}```.
+"""
 
-    Keep small paragraphs 70 words.
-    My resume here it is ```{resume}```,
-    Now here is the job description ```{jd}```.
-    Company name is ```{company}```
-    """
+conclusion_prompt = """
+Using the first hook: ```{hook1}``` and second hook: ```{hook2}```, write a closing paragraph for the 
+cover letter. Reiterate my strong interest in the role and keep it within 50 words.
+"""
 
-conclusion_prompt = """ here is the first hook {hook1} and the second hook {hook2}.
-    Now your task is to close out the cover letter with a final paragraph reiterating my strong interest in the role.
-    Be concise and keep it within 50 words."""
 
 get_match_prompt = """You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of 
         ATS functionality, your task is to evaluate the resume against this job description ```{jd}```. 
