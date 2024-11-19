@@ -1,5 +1,3 @@
-Package                      Version
----------------------------- -----------
 aiohappyeyeballs             2.4.3
 aiohttp                      3.11.2
 aiosignal                    1.3.1
