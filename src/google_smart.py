@@ -2,44 +2,43 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 from docx import Document
-import PyPDF2
+from pypdf import PdfReader, PdfWriter
 from docx.shared import Pt
 from docx.shared import RGBColor
-import sys
+import sys,io
 sys.path.append("..")
 from config.config import (challenge_prompt, intro_prompt, body_prompt, 
                            conclusion_prompt, get_match_prompt, eval_prompt,
                            FName, LName)
 
-model = ChatGoogleGenerativeAI(model="gemini-pro")
+model = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
 
 
 def input_pdf_setup(uploaded_file):
     if uploaded_file is not None:
         ## Convert the PDF to image
         # creating a pdf file object
-        pdfFileObj = open(uploaded_file, 'rb')
 
         # creating a pdf reader object
-        pdfReader = PyPDF2.PdfReader(pdfFileObj)
+        pdf_stream = io.BytesIO(uploaded_file)
+
+        pdfReader = PdfReader(pdf_stream)
 
         # creating a page object
         pageObj = pdfReader.pages[0]
         txt = pageObj.extract_text()
-        pdfFileObj.close()
         #extracting text from page
         return txt
 
 
-def get_eval(jd, resume):
+async def get_eval(jd, resume):
     if resume is not None:
         # pdf_content = input_pdf_setup(uploaded_file)
         eval_prompt_template = PromptTemplate.from_template(template = eval_prompt)
         eval_chain = LLMChain(prompt = eval_prompt_template ,llm = model, output_key = "eval_score")
-        response = eval_chain.invoke({"resume":resume, "jd":jd})
-        print(response['eval_score'])
-    else:
-        print("Please uplaod the resume")
+        response = await eval_chain.ainvoke({"resume":resume, "jd":jd})
+        return response['eval_score']
+
 
 
 def get_match_score(jd, resume):
@@ -53,7 +52,7 @@ def get_match_score(jd, resume):
         print("Please upload the resume")
 
 
-def cover_letter(jd, resume, company):
+async def cover_letter(jd, resume, company):
     challenge_prompt_template = PromptTemplate.from_template(template = challenge_prompt)
     challenge_chain = LLMChain(llm = model, prompt = challenge_prompt_template, 
                                 output_key = "challenges")
@@ -73,7 +72,25 @@ def cover_letter(jd, resume, company):
     final_chain  = SequentialChain(chains = [challenge_chain, intro_chain, body_chain, conclusion_chain],
                                     input_variables=["jd", "resume", "company"],
                                     output_variables=["hook1", "hook2", "hook3"])
-    final = final_chain.invoke({"jd":jd, "resume": resume, "company": company})
+    final = await final_chain.ainvoke({"jd":jd, "resume": resume, "company": company})
     hook1, hook2, hook3  = final["hook1"], final["hook2"], final["hook3"]
     cv = f"""Hello Hiring team at {company},\n\n {hook1} \n\n {hook2} \n\n {hook3} \n\n Thank you for the opportunity, \n {FName} {LName}"""
-    return cv
+    doc = Document()
+    style = doc.styles.add_style('NewStyle', 1)
+    style.font.name = 'Calibri'
+    style.font.size = Pt(12)
+    style.font.color.rgb = RGBColor(0, 0, 0)
+    style.line_spacing = 0.5
+    
+    # Add the cover letter to the document
+    for line in cv.split("\n"):
+        paragraph = doc.add_paragraph(line, style = "No Spacing")
+        paragraph.style = doc.styles['NewStyle']
+
+    # Save the document to a BytesIO stream
+    byte_stream = io.BytesIO()
+    doc.save(byte_stream)
+    byte_stream.seek(0)  # Reset the pointer to the beginning of the stream
+
+    # Return the byte stream content
+    return cv, byte_stream.getvalue()

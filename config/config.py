@@ -89,7 +89,8 @@ eval_prompt = """Be really concise and avoid generic statements, Specify How the
                 which bullets points can be modified to tailor the resume best to the job descripion. 
                 List all the points one by one. Just suggest changes in expierience and project section. 
                 Be strict and tell will resume pass the screnning test. Suggest changes that are 
-                related to the Job description and align with resume, Avoid in general fixes.
+                related to the Job description and align with resume.
+                Write the skills to be included in the resume and are missing.
                 Here is resume ```{resume}``` and here is the job description ```{jd}```
                 """
         
