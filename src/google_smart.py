@@ -9,7 +9,7 @@ import sys,io
 sys.path.append("..")
 from config.config import (challenge_prompt, intro_prompt, body_prompt, 
                            conclusion_prompt, get_match_prompt, eval_prompt,
-                           FName, LName)
+                           FName, LName, unified_prompt)
 
 model = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
 
@@ -42,15 +42,12 @@ def get_eval(jd, resume):
 
 
 def get_match_score(jd, resume):
-    if resume is not None:
-        # pdf_content = input_pdf_setup(uploaded_file)
-        get_match_prompt_template = PromptTemplate.from_template(template = get_match_prompt)
-        get_match_chain = LLMChain(prompt = get_match_prompt_template ,llm = model, output_key = "match_score")
-        response = get_match_chain.invoke({"resume":resume, "jd":jd})
-        print(response['match_score'])
-    else:
-        print("Please upload the resume")
 
+    # pdf_content = input_pdf_setup(uploaded_file)
+    get_match_prompt_template = PromptTemplate.from_template(template = get_match_prompt)
+    get_match_chain = LLMChain(prompt = get_match_prompt_template ,llm = model, output_key = "match_score")
+    response = get_match_chain.invoke({"resume":resume, "jd":jd})
+    return response['match_score']
 
 def cover_letter(jd, resume, company):
     challenge_prompt_template = PromptTemplate.from_template(template = challenge_prompt)
@@ -75,6 +72,34 @@ def cover_letter(jd, resume, company):
     final = final_chain.invoke({"jd":jd, "resume": resume, "company": company})
     hook1, hook2, hook3  = final["hook1"], final["hook2"], final["hook3"]
     cv = f"""Hello Hiring team at {company},\n\n {hook1} \n\n {hook2} \n\n {hook3} \n\n Thank you for the opportunity, \n {FName} {LName}"""
+    doc = Document()
+    style = doc.styles.add_style('NewStyle', 1)
+    style.font.name = 'Calibri'
+    style.font.size = Pt(12)
+    style.font.color.rgb = RGBColor(0, 0, 0)
+    style.line_spacing = 0.5
+    
+    # Add the cover letter to the document
+    for line in cv.split("\n"):
+        paragraph = doc.add_paragraph(line, style = "No Spacing")
+        paragraph.style = doc.styles['NewStyle']
+
+    # Save the document to a BytesIO stream
+    byte_stream = io.BytesIO()
+    doc.save(byte_stream)
+    byte_stream.seek(0)  # Reset the pointer to the beginning of the stream
+
+    # Return the byte stream content
+    return cv, byte_stream.getvalue()
+
+
+def cover_letter_unified_prompt(jd, resume, company):
+    unified_prompt_template = PromptTemplate.from_template(template = unified_prompt)
+
+    unified_chain = LLMChain(llm=model, prompt=unified_prompt_template)
+
+    final = unified_chain.invoke({"jd":jd, "resume": resume, "company": company})
+    cv = f"""{final['text']}"""
     doc = Document()
     style = doc.styles.add_style('NewStyle', 1)
     style.font.name = 'Calibri'

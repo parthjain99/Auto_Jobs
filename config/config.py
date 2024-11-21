@@ -66,7 +66,6 @@ leadership examples, innovations, technical skills, and key strengths.
 Keep the paragraph concise, up to 70 words. 
 My resume: ```{resume}```. 
 Job description: ```{jd}```. 
-Company: ```{company}```.
 """
 
 conclusion_prompt = """
@@ -82,10 +81,27 @@ get_match_prompt = """You are an skilled ATS (Applicant Tracking System) scanner
 
 eval_prompt = """Be really concise and avoid generic statements, Specify How the resume bullet points
                 which bullets points can be modified to tailor the resume best to the job descripion. 
-                List all the points one by one. Just suggest changes in expierience and project section. 
+                List all the points one by one.
                 Be strict and tell will resume pass the screnning test. Suggest changes that are 
                 related to the Job description and align with resume.
-                Write the skills to be included in the resume and are missing.
-                Here is resume ```{resume}``` and here is the job description ```{jd}```
+                Avoid giving general resume advice.
+                Do not suggest statements to be removed.
+                Inputs:
+                - Resume: ```{resume}```
+                - Job description: ```{jd}```
                 """
         
+unified_prompt = """
+Act as an experienced career coach. Analyze the job description to identify key challenges and their root causes: ```{jd}```. 
+Write a cover letter to company covering:
+1. An engaging hook for my cover letter, highlighting my 
+experience and qualifications to show empathy and capability in addressing the challenges that this job role has been opened up. [70 words]
+2. 2-3 70-word paragraph expanding on relevant experiences from my resume, showcasing alignment with the job description addressing challenges that the job role is opened for. Include specific results, achievements, leadership examples, innovations, technical skills, and key strengths.
+3. A 50-word closing paragraph reiterating my strong interest in the role.
+4. Add signing Pleasantries.
+Inputs:
+- Resume: ```{resume}```
+- Job description: ```{jd}```
+- Company: ```{company}```.
+No headings for section it should be in a formal letter format. Exclude sender and recipient information.
+"""

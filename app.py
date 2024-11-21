@@ -24,18 +24,22 @@ if st.button("SUBMIT"):
         st.warning("Please upload a resume, enter a job description and company name before submitting.")
     else:
         # Run concurrent tasks
+        job_match = get_match_score(jd, txt)
+
         eval_file = get_eval(jd, txt)
-        cv, file = cover_letter(jd, txt, company)
+        cv, file = cover_letter_unified_prompt(jd, txt, company)
 
         # Display evaluation result
         st.subheader("Evaluation Result")
+        st.markdown(job_match)
+        st.subheader("Suggested Improvements")
         st.markdown(eval_file)
 
         # Display Cover Letter and Download Button
         st.subheader("Cover Letter")
         st.text_area(label ="Cover Letter", value = cv, height = 500)
         st.download_button(
-            label='Download file',
+            label='Download Cover letter in docx',
             data=file,
             file_name="company.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
