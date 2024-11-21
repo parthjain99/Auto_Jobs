@@ -19,15 +19,20 @@ jd = st.text_area("Enter job description")
 company = st.text_input("Enter Company name")
 
 # Submit button
+
 if st.button("SUBMIT"):
     if not resume_file or not jd or not company:
         st.warning("Please upload a resume, enter a job description and company name before submitting.")
     else:
         # Run concurrent tasks
-        job_match = get_match_score(jd, txt)
+        with st.spinner("Getting resume match scores..."):
+            job_match = get_match_score(jd, txt)
+            
+        with st.spinner(" Getting resume improvement suggestions..."):
+            eval_file = get_eval(jd, txt)
 
-        eval_file = get_eval(jd, txt)
-        cv, file = cover_letter_unified_prompt(jd, txt, company)
+        with st.spinner(" Generating Cover letter..."):
+            cv, file = cover_letter_unified_prompt(jd, txt, company)
 
         # Display evaluation result
         st.subheader("Evaluation Result")
