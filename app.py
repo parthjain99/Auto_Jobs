@@ -6,7 +6,7 @@ from src.google_smart import *
 st.title('Resume Evaluation and Cover Letter generation')
 
 # Upload resume file
-resume_file = st.file_uploader('Upload your resume', type=['pdf', 'docx'])
+resume_file = st.file_uploader('Upload your resume', type=['pdf'])
 if resume_file:
     # Read uploaded file as bytes
     resume_file_bytes = resume_file.read()
