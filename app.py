@@ -62,7 +62,7 @@ if cv:
     st.subheader("Cover Letter")
     st.text_area(label ="Cover Letter", value = cv, height = 500)
     st.download_button(
-        label='Download Cover letter in docx',
+        label='Download Cover letter as .docx file',
         data=file,
         file_name="company.docx",
         mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
