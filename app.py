@@ -3,7 +3,7 @@ import streamlit as st
 from src.google_smart import *
 
 # Title of the app
-st.title('Resume Evaluation and Cover Letter generation')
+st.title('Resume AI')
 
 # Upload resume file
 resume_file = st.file_uploader('Upload your resume', type=['pdf'])
@@ -18,34 +18,52 @@ if resume_file:
 jd = st.text_area("Enter job description")
 company = st.text_input("Enter Company name")
 
-# Submit button
+analyze_resume =st.button("Analyze Resume based on Job description")
+ats_match =st.button("ATS Match")
+cv = st.button("Generate Cover Letter")
 
-if st.button("SUBMIT"):
+if analyze_resume:
     if not resume_file or not jd or not company:
         st.warning("Please upload a resume, enter a job description and company name before submitting.")
-    else:
-        # Run concurrent tasks
-        with st.spinner("Getting resume match scores..."):
-            job_match = get_match_score(jd, txt)
-            
-        with st.spinner(" Getting resume improvement suggestions..."):
+            # Run concurrent tasks
+    with st.spinner("Analyzing resume..."):
+        try:
             eval_file = get_eval(jd, txt)
 
-        with st.spinner(" Generating Cover letter..."):
-            cv, file = cover_letter_unified_prompt(jd, txt, company)
+        except Exception as e:
+            st.error(f"The service is in high demand. Please try again later.")
+    st.subheader("Suggested Improvements")
+    st.markdown(eval_file)
+
+if ats_match:
+    if not resume_file or not jd or not company:
+        st.warning("Please upload a resume, enter a job description and company name before submitting.")
+    with st.spinner("Getting resume match scores..."):
+        try:
+            job_match = get_match_score(jd, txt)
+        except Exception as e:
+            st.error(f"The service is in high demand. Please try again later.")
 
         # Display evaluation result
-        st.subheader("Evaluation Result")
-        st.markdown(job_match)
-        st.subheader("Suggested Improvements")
-        st.markdown(eval_file)
+    st.subheader("Evaluation Result")
+    st.markdown(job_match)
 
-        # Display Cover Letter and Download Button
-        st.subheader("Cover Letter")
-        st.text_area(label ="Cover Letter", value = cv, height = 500)
-        st.download_button(
-            label='Download Cover letter in docx',
-            data=file,
-            file_name="company.docx",
-            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        )
+if cv:
+    if not resume_file or not jd or not company:
+        st.warning("Please upload a resume, enter a job description and company name before submitting.")
+
+    with st.spinner("Generating Cover letter..."):
+        try:
+            cv, file = cover_letter_unified_prompt(jd, txt, company)
+        except Exception as e:
+            st.error(f"The service is in high demand. Please try again later.")
+
+    # Display Cover Letter and Download Button
+    st.subheader("Cover Letter")
+    st.text_area(label ="Cover Letter", value = cv, height = 500)
+    st.download_button(
+        label='Download Cover letter in docx',
+        data=file,
+        file_name="company.docx",
+        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    )
